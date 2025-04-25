@@ -29,7 +29,6 @@ class Program
             Console.Write("Your letter grade is F. ");
         }
 
-
         if(g >= 70)
         {
             Console.WriteLine("Congratulations! You have passed the class! ");
