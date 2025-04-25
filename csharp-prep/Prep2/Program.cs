@@ -36,7 +36,7 @@ class Program
         }
         else
         {
-            Console.WriteLine("You didn't pass this class. Good luck taking it next time! ")
+            Console.WriteLine("You didn't pass this class. Good luck taking it next time! ");
         }
     }
 }
