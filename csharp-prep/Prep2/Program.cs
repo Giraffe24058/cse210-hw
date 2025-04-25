@@ -10,24 +10,25 @@ class Program
 
         if (90 < g && g < 100)
         {
-            Console.Write("Your letter grade is A. ");
+            Console.WriteLine("Your letter grade is A. ");
         }
         else if(80 < g && g < 90)
         {
-            Console.Write("Your letter grade is B. ");
+            Console.WriteLine("Your letter grade is B. ");
         }
         else if(70 < g && g < 80)
         {
-            Console.Write("Your letter grade is C. ");
+            Console.WriteLine("Your letter grade is C. ");
         }
         else if (60 < g && g < 70)
         {
-            Console.Write("Your letter grade is D. ");
+            Console.WriteLine("Your letter grade is D. ");
         }
         else
         {
-            Console.Write("Your letter grade is F. ");
+            Console.WriteLine("Your letter grade is F. ");
         }
+
 
         if(g >= 70)
         {
