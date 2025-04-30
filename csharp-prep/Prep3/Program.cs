@@ -13,33 +13,25 @@ class Program
 
     do
     {
-    Console.Write("Do you want to continue? ");
-    response = Console.ReadLine();
-    } while (guess != magicNumber);
-
-    {
-        Console.WriteLine("Guess a number: ");
+        Console.Write("What is your guess? ");
         guess = int.Parse(Console.ReadLine());
-    while (guess != magicNumber)
+
+        if (magicNumber > guess)
         {
-            Console.Write("What is your guess? ");
-            guess = int.Parse(Console.ReadLine());
-
-            if (magicNumber > guess)
-            {
-                Console.WriteLine("Higher");
+            Console.WriteLine("Higher");
+        }
+        else if (magicNumber < guess)
+        {
+            Console.WriteLine("Lower");
             }
-            else if (magicNumber < guess)
-            {
-                Console.WriteLine("Lower");
-            }
-            else
-            {
-                Console.WriteLine("You guessed it!");
-            }
+        else
+        {
+            Console.WriteLine("You guessed it!");
+        }
+        
 
-
-    }
+    } while (guess != magicNumber);
+        
 
 
 
