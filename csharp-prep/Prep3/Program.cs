@@ -32,7 +32,7 @@ class Program
 
     } while (guess != magicNumber);
         
-
+    Console.WriteLine($"It only took you {guessCount} guesses!");
 
     }
 }
