@@ -6,38 +6,32 @@ class Program
     {
 
     Random randomGenerator = new Random();
-    int magicNumber = randomGenerator.Next(1, 101);
+    int magicNumber = randomGenerator.Next(1, 1001);
 
     int guess = -1;
-
+    int guessCount = 0;
 
     do
     {
-        Console.Write("What is your guess? ");
+        Console.Write("Guess a number from 1 to 1001: ");
         guess = int.Parse(Console.ReadLine());
 
         if (magicNumber > guess)
         {
-            Console.WriteLine("Higher");
+            Console.WriteLine("It's higher than that");
         }
         else if (magicNumber < guess)
         {
-            Console.WriteLine("Lower");
+            Console.WriteLine("It's lower than that");
             }
         else
         {
-            Console.WriteLine("You guessed it!");
+            Console.WriteLine($"You guessed it! It was {magicNumber}!");
         }
-        
+        ++ guessCount;
 
     } while (guess != magicNumber);
         
-
-
-
-
-
-
 
 
     }
