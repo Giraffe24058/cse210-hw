@@ -36,7 +36,7 @@ class Program
     {
         Console.Write($"Amazing!!! You guessed it on your first try!");
     }
-    else if (guessCount < 11) // This means that it took less than 20 guesses
+    else if (guessCount < 15) // This means that it took less than 20 guesses
     {
         Console.Write($"Way to go! It only took you {guessCount} guesses!");
         }
