@@ -18,11 +18,11 @@ class Program
 
         if (magicNumber > guess)
         {
-            Console.WriteLine("It's higher than that");
+            Console.WriteLine("It's higher than that!");
         }
         else if (magicNumber < guess)
         {
-            Console.WriteLine("It's lower than that");
+            Console.WriteLine("It's lower than that!");
             }
         else
         {
