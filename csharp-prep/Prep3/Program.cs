@@ -11,12 +11,13 @@ class Program
     int guess = -1;
     int guessCount = 0;
 
-    Console.Write("Do you want to play the number guessing game? ");
-    yesOrNo = Console.ReadLine();
 
-    while yesOrNo == "yes";
+    Console.Write("Do you want to play the numbers game? (Y/N)  ");
+    string response = Console.ReadLine();
+    
+
+    if (response == "Y")
     {
-            
         do
         {
             Console.Write("Guess a number from 1 to 1001: ");
@@ -62,5 +63,9 @@ class Program
 
     }
 
+    else
+    {
+        Console.Write("Okay. Maybe next time.");
+    }
     }
 }
