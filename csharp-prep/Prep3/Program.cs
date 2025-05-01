@@ -11,6 +11,9 @@ class Program
     int guess = -1;
     int guessCount = 0;
 
+    Console.Write("Do you want to play the numbers game? (Y/N)  ");
+    string response = Console.ReadLine();
+
     while (guess != magicNumber)
     {
         Console.Write("Guess a number from 1 to 1001: ");
@@ -53,14 +56,7 @@ class Program
         Console.WriteLine($"It took you {guessCount} guesses! Can you get it in less than that next time? ");
     }
 
-    
 
-    Console.Write("Do you want to play the numbers game? (Y/N)  ");
-    string response = Console.ReadLine();
 
-    if (response != "N")
-    {
-        Console.Write("Okay. Maybe some other time.");
-    }
     }
 }
