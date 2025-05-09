@@ -1,6 +1,4 @@
 using System;
-using System.ComponentModel;
-
 public class Resume
 {
     public string _name;
@@ -8,7 +6,7 @@ public class Resume
     public void DisplayResumeDetails()
     {
         Console.WriteLine($"Name: {_name}");
-        Console.WriteLine($"Jobs: {_jobs}");
+        Console.WriteLine($"Jobs: ");
         foreach (Job job in _jobs)
         {
             job.DisplayJobDetails();
