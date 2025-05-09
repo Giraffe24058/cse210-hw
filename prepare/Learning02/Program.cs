@@ -20,7 +20,6 @@ class Program
         job1.DisplayJobDetails();
         job2.DisplayJobDetails();
 
-        Console.WriteLine("Hello Learning02 World!");
     }
 }
 
