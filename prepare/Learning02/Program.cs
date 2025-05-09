@@ -17,7 +17,8 @@ class Program
         job2._endYear = 2017;
     
 
-
+        job1.DisplayJobDetails();
+        job2.DisplayJobDetails();
 
         Console.WriteLine("Hello Learning02 World!");
     }
