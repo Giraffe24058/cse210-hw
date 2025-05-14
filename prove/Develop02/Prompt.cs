@@ -9,3 +9,4 @@ class Prompt
         Console.Write(" ");
     }
 }
+
