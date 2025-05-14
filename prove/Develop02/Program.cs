@@ -1,9 +1,31 @@
-using System;
+﻿// See https://aka.ms/new-console-template for more information
+Console.WriteLine("Hello, World!");
 
-class Program
+
+class Journal
 {
-    static void Main(string[] args)
+    public List<Entry> _Entries;
+    public string _fileName;
+    public void AddEntry()
     {
-        Console.WriteLine("Hello Develop02 World!");
+         
+    }
+    public void Display()
+    {
+         
+    }
+    public void SaveToFile()
+    {
+         
+    }
+    public void LoadFromFile()
+    {
+         
+    }
+    public void QuitProgram()
+    {
+         
     }
 }
+
+
