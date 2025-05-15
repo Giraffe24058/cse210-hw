@@ -2,30 +2,9 @@
 Console.WriteLine("Hello, World!");
 
 
-class Journal
+public class Main
 {
-    public List<Entry> _Entries;
-    public string _fileName;
-    public void AddEntry()
-    {
-         
-    }
-    public void Display()
-    {
-         
-    }
-    public void SaveToFile()
-    {
-        
-    }
-    public void LoadFromFile()
-    {
-         
-    }
-    public void QuitProgram()
-    {
-         
-    }
+    
 }
 
 
