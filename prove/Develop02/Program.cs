@@ -1,10 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using System;
 
-
-public class Main
+class Program
 {
-    
+
+    static void Main(string[] args)
+    {
+        Prompt p1 = new Prompt();
+        
+
+
+    }
+
 }
-
-
