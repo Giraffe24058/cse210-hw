@@ -21,9 +21,6 @@ class Journal
     {
          
     }
-    public void QuitProgram()
-    {
-         
-    }
+    
 }
 
