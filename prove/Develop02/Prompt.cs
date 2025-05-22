@@ -1,9 +1,10 @@
 using System;
+using System.ComponentModel.DataAnnotations;
 
 
-class Prompt 
+public class Prompt
 {
-    public List<string> Prompts = new List<string>
+    private List<string> _prompts = new List<string>()
     {
         "How do I feel about my efforts today?",
         "Who did I interact with today?",
@@ -11,9 +12,16 @@ class Prompt
         "What books am I looking forward to reading?",
         "Where have I seen something good in my life?",
     };
-    void DisplayPrompts()
+
+    private Random _random = new Random();
+
+    public string Get_Prompt()
     {
-        Console.Write(" ");
+        int index = _random.Next(_prompts.Count);
+        return _prompts[index];
     }
 }
+
+
+
 
