@@ -19,7 +19,7 @@ public class Fraction
 
     public Fraction(int numerator, int denominator)
     {
-        -numerator = numerator;
+        _numerator = numerator;
         _denominator = denominator;
     }
 
