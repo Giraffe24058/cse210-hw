@@ -31,7 +31,7 @@ public class Fraction
 
     public double GetDecimalValue()
     {
-        return
-        (2 * _numerator) / (2 * _denominator);
+        return (double)_numerator / (double)_denominator;
+
     }
 }
