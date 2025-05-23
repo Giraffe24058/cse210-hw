@@ -1,0 +1,34 @@
+using System;
+
+public class Fraction
+{
+    private int _numerator;
+    private int _denominator;
+
+    public Fraction()
+    {
+        _numerator = 1;
+        _denominator = 1;
+    }
+
+    public Fraction(int wholeNumber)
+    {
+        _numerator = wholeNumber;
+        _denominator = 1;
+    }
+
+    public Fraction(int numerator, int denominator)
+    {
+        -numerator = numerator;
+        _denominator = denominator;
+    }
+
+    public string GetFraction()
+    {
+        string fractionText = $"{_numerator}/{_denominator}";
+        return fractionText;
+    }
+
+    public double GetDecimalValue()
+    return (2 * _numerator) / (2 * _denomiator);
+}
