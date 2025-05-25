@@ -29,7 +29,7 @@ public class Entry
 
     public static Entry CreateEntryFromSavedData(string saved)
     {
-        string[] parts = saved.Split('Ω');
+        string[] parts = saved.Split('|');
         Entry entry = new Entry(parts[1], parts[2]);
         entry._dateTime = parts[0];
         return entry;

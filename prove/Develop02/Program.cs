@@ -1,5 +1,10 @@
 ﻿using System;
 
+
+// For this assignment, I added creativity by adding a trivia or personality
+// question, of sorts, to make it fun and more enjoyable. This way I can be 
+// thoughtful and serious in a journal entry as well as having a fun way to 
+// enjoy the journal and show my preferences/personality.
 class Program
 {
 
@@ -11,13 +16,14 @@ class Program
 
         bool keepGoing = true;
         while (keepGoing)
-
+        {
             Console.Write("\nPlease select a choice from the following: ");
-        Console.WriteLine("1. Write a new entry");
-        Console.WriteLine("2. Display the journal");
-        Console.WriteLine("3. Save the journal to a file");
-        Console.WriteLine("4. Load the journal from a file"); Console.WriteLine("5. Quit");
-        Console.Write("What's your choice? (1-5) ");
+            Console.WriteLine("1. Write a new entry");
+            Console.WriteLine("2. Display the journal");
+            Console.WriteLine("3. Save the journal to a file");
+            Console.WriteLine("4. Load the journal from a file"); Console.WriteLine("5. Quit");
+            Console.Write("What's your choice? (1-5) ");
+        }
 
         string choice = Console.ReadLine();
         switch (choice)
