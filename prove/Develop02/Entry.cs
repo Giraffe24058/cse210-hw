@@ -17,9 +17,9 @@ public class Entry
 
     public void WriteEntry()
     {
-        Console.WriteLine($"Date - {_dateTime}");
+        Console.WriteLine($"Date: {_dateTime}");
         Console.Write($"Prompt: {_prompt}");
-        Console.WriteLine($"Response: {_response}\n");
+        Console.WriteLine($" Response: {_response}\n");
     }
 
     public string FormatEntryForSaving()
