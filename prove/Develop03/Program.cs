@@ -24,6 +24,8 @@ class Program
             Console.WriteLine(scripture.GetRenderedText());
             Console.WriteLine("\nPress Enter to hide more words, type 'new' for a new scripture, or 'quit' to exit.");
 
+            string input = Console.ReadLine();
+            
             if (input.ToLower() == "quit" || scripture.IsCompletelyHidden())
                 break;
 
