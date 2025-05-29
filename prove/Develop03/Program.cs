@@ -4,7 +4,6 @@ class Program
 {
     static void Main(string[] args)
     {
-        Console.WriteLine("Hello Develop03 World!");
         Reference reference = new Reference("Proverbs", 3, 19, 19);
         Scripture scripture = new Scripture(reference, "The Lord by wisdom hath founded the earth; by understanding hath he established the heavens.");
 
