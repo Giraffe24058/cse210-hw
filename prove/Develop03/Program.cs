@@ -4,20 +4,39 @@ class Program
 {
     static void Main(string[] args)
     {
-        Reference reference = new Reference("Proverbs", 3, 19, 19);
-        Scripture scripture = new Scripture(reference, "The Lord by wisdom hath founded the earth; by understanding hath he established the heavens.");
+
+        List<Scripture> scriptureLibrary = new List<Scripture>
+        {
+            new Scripture(new Reference("Proverbs", 1, 2, 3), "..."),
+            new Scripture(new Reference("Proverbs", 1, 2, 3), "..."),
+            new Scripture(new Reference("Proverbs", 1, 2, 3), "..."),
+            new Scripture(new Reference("Proverbs", 1, 2, 3), "..."),
+            new Scripture(new Reference("Proverbs", 1, 2, 3), "..."),
+        };
+
+
+        Random rand = new Random();
+        Scripture scripture = scriptureLibrary[rand.Next(scriptureLibrary.Count)];
 
         while (true)
         {
             Console.Clear();
             Console.WriteLine(scripture.GetRenderedText());
-            Console.WriteLine("\nPress Enter to hide more words or type 'quit' to exit.");
-            string input = Console.ReadLine();
+            Console.WriteLine("\nPress Enter to hide more words, type 'new' for a new scripture, or 'quit' to exit.");
 
             if (input.ToLower() == "quit" || scripture.IsCompletelyHidden())
                 break;
 
-            scripture.HideRandomWords(3);
+
+            else if (input.ToLower() == "new")
+            {
+                scripture = scriptureLibrary[rand.Next(scriptureLibrary.Count)];
+            }
+            else if (!scripture.IsCompletelyHidden())
+            {
+                scripture.HideRandomWords(3);
+            }
+
         }
     }
 }
