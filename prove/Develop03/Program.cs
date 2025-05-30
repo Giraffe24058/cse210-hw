@@ -1,5 +1,9 @@
 using System;
 
+// I exceeded the core requirements of this project by making a list of scriptures.
+// Instead of just having one scriptuer, I decided dto put a few scriptures that I 
+// liked, and I also put in the doctrinal mastery scripture passages from seminary.
+// This allows for more scripture memorization. It selects scriptures at random.
 class Program
 {
     static void Main(string[] args)
@@ -22,7 +26,7 @@ class Program
             new Scripture(new Reference("Ether", 12, 27), "If men come unto me ... then will I make weak things become strong unto them."),
             new Scripture(new Reference("Moroni", 7, 45, 48), "Charity is the pure love of Christ."),
             new Scripture(new Reference("Moroni", 10, 4, 5), "Ask with a sincere heart, with real intent, having faith in Christ ... [and] by the power of the Holy Ghost ye may know the truth of all things.")
-            
+
         };
 
 
@@ -41,13 +45,14 @@ class Program
             else
             {
                 Console.WriteLine("\nPress Enter to hide more words, type 'new' for a new scripture or 'quit' to exit.");
-            };
+            }
+            ;
 
             string input = Console.ReadLine().ToLower();
 
             if (input == "quit")
                 break;
-            
+
             else if (input == "new")
             {
                 scripture = scriptureLibrary[rand.Next(scriptureLibrary.Count)];
