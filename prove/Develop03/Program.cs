@@ -22,7 +22,6 @@ class Program
             new Scripture(new Reference("Ether", 12, 27), "If men come unto me … then will I make weak things become strong unto them."),
             new Scripture(new Reference("Moroni", 7, 45, 48), "Charity is the pure love of Christ."),
             new Scripture(new Reference("Moroni", 10, 4, 5), "Ask with a sincere heart, with real intent, having faith in Christ … [and] by the power of the Holy Ghost ye may know the truth of all things.")
-
             
         };
 
