@@ -33,15 +33,22 @@ class Program
         {
             Console.Clear();
             Console.WriteLine(scripture.GetRenderedText());
-            Console.WriteLine("\nPress Enter to hide more words, type 'new' for a new scripture, or 'quit' to exit.");
 
-            string input = Console.ReadLine();
-            
-            if (input.ToLower() == "quit" || scripture.IsCompletelyHidden())
+            if (scripture.IsCompletelyHidden())
+            {
+                Console.WriteLine("\nAll words are hidden! Type 'new' for a new scripture or 'quit' to exit.");
+            }
+            else
+            {
+                Console.WriteLine("\nPress Enter to hide mroe words, type 'new' for a new scripture or 'quit' to exit.");
+            };
+
+            string input = Console.ReadLine().ToLower();
+
+            if (input == "quit")
                 break;
-
-
-            else if (input.ToLower() == "new")
+            
+            else if (input == "new")
             {
                 scripture = scriptureLibrary[rand.Next(scriptureLibrary.Count)];
             }
