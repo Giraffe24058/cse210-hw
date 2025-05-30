@@ -18,20 +18,25 @@ public class Scripture
     }
 
     public void HideRandomWords(int numberToHide)
-    {
-        Random rand = new Random();
-        int hiddenCount = 0;
+{
+    Random rand = new Random();
+    int hiddenCount = 0;
+    int attempts = 0;
 
-        while (hiddenCount < numberToHide)
+    while (hiddenCount < numberToHide && attempts < 100)
+    {
+        int index = rand.Next(_words.Count);
+
+        if (!_words[index].IsHidden())
         {
-            int index = rand.Next(_words.Count);
-            if (!_words[index].IsHidden())
-            {
-                _words[index].Hide();
-                hiddenCount++;
-            }
+            _words[index].Hide();
+            hiddenCount++;
         }
+
+        attempts++;
     }
+}
+
 
     public string GetRenderedText()
     {
