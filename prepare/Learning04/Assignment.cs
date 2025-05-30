@@ -16,7 +16,6 @@ public class Assignment
         return $"{_studentName} - {_topic}";
     }
 
-    // Optional: Getter for student name (used later in WritingAssignment)
     public string GetStudentName()
     {
         return _studentName;
