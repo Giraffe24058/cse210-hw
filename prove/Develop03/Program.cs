@@ -40,7 +40,7 @@ class Program
             }
             else
             {
-                Console.WriteLine("\nPress Enter to hide mroe words, type 'new' for a new scripture or 'quit' to exit.");
+                Console.WriteLine("\nPress Enter to hide more words, type 'new' for a new scripture or 'quit' to exit.");
             };
 
             string input = Console.ReadLine().ToLower();
@@ -54,7 +54,7 @@ class Program
             }
             else if (!scripture.IsCompletelyHidden())
             {
-                scripture.HideRandomWords(3);
+                scripture.HideRandomWords(2);
             }
 
         }
