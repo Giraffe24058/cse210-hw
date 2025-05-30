@@ -1,7 +1,7 @@
 using System;
 
 // I exceeded the core requirements of this project by making a list of scriptures.
-// Instead of just having one scriptuer, I decided dto put a few scriptures that I 
+// Instead of just having one scripture, I decided to put a few scriptures that I 
 // liked, and I also put in the doctrinal mastery scripture passages from seminary.
 // This allows for more scripture memorization. It selects scriptures at random.
 class Program
