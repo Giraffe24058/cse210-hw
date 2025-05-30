@@ -41,7 +41,7 @@ public class Scripture
     public string GetRenderedText()
     {
         string renderedWords = string.Join(" ", _words.ConvertAll(w => w.GetRenderedText()));
-        return $"{_reference.GetDisplayText()} {renderedWords}";
+        return $"{_reference.GetDisplayText()} \n   {renderedWords}";
     }
 
     public bool IsCompletelyHidden()
