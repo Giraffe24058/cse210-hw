@@ -3,8 +3,6 @@
 // - This improves the user experience by avoiding repetition and making each session feel more thoughtful.
 
 using System;
-
-
 abstract class Mindfulness
 {
     protected string _className;
@@ -114,14 +112,31 @@ class Reflection : Mindfulness
     {
         Start();
         Random rand = new Random();
+
         Console.WriteLine($"\n{_prompts[rand.Next(_prompts.Count)]}");
         Spinner(3);
 
+        List<string> shuffledQuestions = new List<string>(_questions);
+        for (int i = shuffledQuestions.Count - 1; i > 0; i--)
+        {
+            int j = rand.Next(i + 1);
+            string temp = shuffledQuestions[i];
+            shuffledQuestions[i] = shuffledQuestions[j];
+            shuffledQuestions[j] = temp;
+        }
+
+        int index = 0;
         DateTime endTime = DateTime.Now.AddSeconds(_time);
         while (DateTime.Now < endTime)
         {
-            Console.WriteLine($"\n{_questions[rand.Next(_questions.Count)]}");
+            if (index >= shuffledQuestions.Count)
+            {
+                index = 0;
+            }
+
+            Console.WriteLine($"\n{shuffledQuestions[index]}");
             Spinner(5);
+            index++;
         }
 
         End();
@@ -149,7 +164,18 @@ class Listing : Mindfulness
     {
         Start();
         Random rand = new Random();
-        Console.WriteLine($"\n{_prompts[rand.Next(_prompts.Count)]}");
+
+        List<string> shuffledPrompts = new List<string>(_prompts);
+        for (int i = shuffledPrompts.Count - 1; i > 0; i--)
+        {
+            int j = rand.Next(i + 1);
+            string temp = shuffledPrompts[i];
+            shuffledPrompts[i] = shuffledPrompts[j];
+            shuffledPrompts[j] = temp;
+        }
+
+        string prompt = shuffledPrompts[0];
+        Console.WriteLine($"\n{prompt}");
         Console.WriteLine("You may begin listing in:");
         Countdown(5);
 
