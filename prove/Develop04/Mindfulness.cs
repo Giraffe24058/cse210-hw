@@ -1,6 +1,6 @@
 using System;
 
-class Program
+class Mindfulness
 {
     static void Main(string[] args)
     {
