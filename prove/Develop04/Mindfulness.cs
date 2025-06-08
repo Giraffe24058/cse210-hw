@@ -9,9 +9,18 @@ public class Mindfulness
 }
 
 public class Breathing  Mindfulness;
+{
+     
+}
 
 
 public class Listing : Mindfulness;
+{
+     
+}
 
 
 public class Reflection : Mindfulness;
+{
+     
+}
