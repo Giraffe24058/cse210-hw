@@ -395,7 +395,7 @@ class Reflection : Mindfulness
         DateTime endTime = DateTime.Now.AddSeconds(_time);
         while (DateTime.Now < endTime)
         {
-            if (index >= shuffledQuestions.Count)
+            if (index >= shuffledQuestions.Count) 
             {
                 index = 0;
             }
