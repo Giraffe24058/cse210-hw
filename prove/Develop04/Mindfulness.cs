@@ -399,7 +399,6 @@ class Reflection : Mindfulness
             {
                 index = 0;
             }
-
             Console.WriteLine($"\n{shuffledQuestions[index]}");
             Spinner(5);
             index++;
