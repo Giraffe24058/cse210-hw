@@ -36,6 +36,6 @@ class ChecklistGoal : Goal
 
     public override void DisplayStatus()
     {
-        Console.WriteLine($"{_name} - {_description} - Points: {_points} - Completed: {_currentCount}/{_targetCount}");
+        Console.WriteLine($"{_name} ({_description}) Points: {_points} - Completed: {_currentCount}/{_targetCount}");
     }
 }
