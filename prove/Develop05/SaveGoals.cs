@@ -49,4 +49,10 @@ class SaveGoals
             goal.DisplayStatus();
         }
     }
+
+        public List<Goal> GetGoals()
+    {
+        return _goals;
+    }
+
 }
