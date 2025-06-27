@@ -106,7 +106,7 @@ class Program
 
         for (int i = 0; i < goals.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {goals[i]._name}");
+            Console.WriteLine($"{i + 1}. {goals[i].Name}");
         }
 
         Console.Write("Enter the number of the goal: ");

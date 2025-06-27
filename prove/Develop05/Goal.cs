@@ -15,6 +15,9 @@ abstract class Goal
         _completion = false;
     }
 
+    public string Name => _name;
+
+
     public abstract bool IsComplete();
     public abstract void RecordEvent();
     public abstract string Save();
