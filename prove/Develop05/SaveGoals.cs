@@ -16,6 +16,17 @@ class SaveGoals
         _goals.Add(goal);
     }
 
+        public void SaveToFile()
+    {
+        using (StreamWriter writer = new StreamWriter("goals.txt"))
+        {
+            foreach (Goal goal in _goals)
+            {
+                writer.WriteLine(goal.Save());
+            }
+        }
+    }
+
     public void SaveAllGoals()
     {
         using (StreamWriter writer = new StreamWriter("goals.txt"))
