@@ -1,3 +1,1 @@
-SimpleGoal|Run a marathon|Complete a marathon race|1000|True
-EternalGoal|Read scriptures|Read scriptures daily|100
-ChecklistGoal|Attend temple|Attend temple 10 times|50|1|10|500
+SimpleGoal|Eat a cherry|get a cherry and eat it|50|True

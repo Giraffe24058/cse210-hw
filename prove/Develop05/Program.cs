@@ -47,8 +47,14 @@ class Program
         Console.WriteLine("1. Simple");
         Console.WriteLine("2. Eternal");
         Console.WriteLine("3. Checklist");
-        Console.Write("Choose a type: ");
-        string type = Console.ReadLine();
+        string type;
+    while (true)
+    {
+        Console.Write("Choose a type (1 = Simple, 2 = Eternal, 3 = Checklist): ");
+        type = Console.ReadLine();
+        if (type == "1" || type == "2" || type == "3") break;
+        Console.WriteLine("Invalid input. Please enter 1, 2, or 3.");
+    }
 
         Console.Write("Enter goal name: ");
         string name = Console.ReadLine();

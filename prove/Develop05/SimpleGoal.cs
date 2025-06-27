@@ -11,9 +11,16 @@ class SimpleGoal : Goal
 
     public override void RecordEvent()
     {
+        if (_completion)
+        {
+            Console.WriteLine($"'{_name}' is already completed. No points awarded.");
+            return;
+        }
+
         _completion = true;
         Console.WriteLine($"Completed: {_name} (+{_points} points)");
     }
+
 
     public override string Save()
     {
