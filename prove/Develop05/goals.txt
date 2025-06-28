@@ -1,1 +1,3 @@
 SimpleGoal|Eat a cherry|get a cherry and eat it|50|True
+SimpleGoal|run|run hard lots|200|True
+EternalGoal|eat healthy|eat fruits, veggies, dairy, meats, grains|50
