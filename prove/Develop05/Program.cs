@@ -1,3 +1,6 @@
+// In this program, I exceeded the creativity requirements by making the points system dependent 
+// on how easy, medium, or hard the user considered the goal to be. I
+
 using System;
 
 class Program
@@ -112,7 +115,7 @@ class Program
 
         for (int i = 0; i < goals.Count; i++)
         {
-            Console.WriteLine($"{i + 1}. {goals[i].Name}");
+            Console.WriteLine($"{i + 1}. {goals[i].GetName}");
         }
 
         Console.Write("Enter the number of the goal: ");

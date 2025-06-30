@@ -1,3 +1,4 @@
 SimpleGoal|Eat a cherry|get a cherry and eat it|50|True
 SimpleGoal|run|run hard lots|200|True
 EternalGoal|eat healthy|eat fruits, veggies, dairy, meats, grains|50
+ChecklistGoal|Read Sense adn Sensibilty|Read dchapter after chapter of Jane Austens book|200|0|40|800
