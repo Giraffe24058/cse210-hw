@@ -1,3 +1,6 @@
+// Enhancements to exceed requirements:
+// - In the Reflection and Listing activities, all prompts/questions are now used once before repeating.
+// - This improves the user experience by avoiding repetition and making each session feel more thoughtful.
 
 class Program
 {
