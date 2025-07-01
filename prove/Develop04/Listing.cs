@@ -39,9 +39,10 @@ class Listing : Mindfulness
         DateTime endTime = DateTime.Now.AddSeconds(_time);
         while (DateTime.Now < endTime)
         {
-            Console.Write("> ");
+            
             if (Console.KeyAvailable)
             {
+                Console.Write("> ");
                 string input = Console.ReadLine();
                 if (!string.IsNullOrWhiteSpace(input))
                     items.Add(input);
