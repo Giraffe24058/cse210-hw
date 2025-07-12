@@ -1,3 +1,5 @@
+using System;
+
 class Program
 {
     static void Main(string[] args)
@@ -7,7 +9,13 @@ class Program
         var exportService = new ExportService();
         var categoryManager = new CategoryManager();
 
-        // Example usage
-        // Add receipts, assign categories, set reminders, export, etc.
+        var receipt = new Receipt("Laptop Purchase", DateTime.Now, "Tech Store", 1299.99m);
+        receiptManager.AddReceipt(receipt);
+        reminderService.SetReminder(receipt, 30);
+        exportService.ExportDocument(receipt);
+        categoryManager.AssignCategory("Electronics", receipt);
+
+        receiptManager.ListReceipts();
+        categoryManager.ListCategories();
     }
 }

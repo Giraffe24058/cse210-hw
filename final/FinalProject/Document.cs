@@ -1,3 +1,5 @@
+using System;
+
 public abstract class Document
 {
     public string Title { get; set; }

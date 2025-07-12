@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 public class ReceiptManager
 {
     private List<Receipt> _receipts = new List<Receipt>();

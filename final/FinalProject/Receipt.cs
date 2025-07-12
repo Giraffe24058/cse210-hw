@@ -1,3 +1,5 @@
+using System;
+
 public class Receipt : Document
 {
     private string _storeName;
@@ -15,7 +17,6 @@ public class Receipt : Document
 
     public override void Export()
     {
-        // Receipt-specific export logic
         Console.WriteLine($"Exporting receipt: {Title}, Store: {_storeName}, Total: {_totalAmount}");
     }
 }
