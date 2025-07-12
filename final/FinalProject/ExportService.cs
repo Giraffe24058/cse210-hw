@@ -1,3 +1,7 @@
-using System;
-
-public class ExportService;
+public class ExportService
+{
+    public void ExportDocument(Document doc)
+    {
+        doc.Export(); // Polymorphic call
+    }
+}
