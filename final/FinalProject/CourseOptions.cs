@@ -15,7 +15,7 @@ public class CourseOption
 
     public Course ToCourse(string status)
     {
-        return new Course(_name, _code, status, professorName);
+        return new Course(_name, _code, status, _professorName);
     }
 
     public void PrintInfo()
