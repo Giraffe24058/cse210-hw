@@ -13,8 +13,9 @@ public class Semester
         courses = new List<Course>();
     }
 
-    public void AddCourse(Course course)
+    public void PrintInfo()
     {
-        courses.Add(course);
+        Console.WriteLine("Semester: " + name);
+        Console.WriteLine("From " + startDate + " to " + endDate);
     }
 }

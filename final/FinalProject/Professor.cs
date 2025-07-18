@@ -10,4 +10,11 @@ public class Professor
         this.department = department;
         this.email = email;
     }
+
+    public void PrintInfo()
+    {
+        Console.WriteLine("Professor: " + name);
+        Console.WriteLine("Department: " + department);
+        Console.WriteLine("Email: " + email);
+    }
 }

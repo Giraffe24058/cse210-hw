@@ -11,8 +11,9 @@ public class Student
         semesters = new List<Semester>();
     }
 
-    public void AddSemester(Semester semester)
+    public void PrintInfo()
     {
-        semesters.Add(semester);
+        Console.WriteLine("Student: " + name);
+        Console.WriteLine("Stage: " + schoolStage);
     }
 }

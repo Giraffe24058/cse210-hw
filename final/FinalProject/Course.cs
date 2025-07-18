@@ -2,21 +2,21 @@ public class Course
 {
     public string name;
     public string code;
-    public string status;
-    public List<Topic> topics;
+    public string progress;
     public Professor professor;
 
-    public Course(string name, string code, string status, Professor professor)
+    public Course(string name, string code, string progress, Professor professor)
     {
         this.name = name;
         this.code = code;
-        this.status = status;
+        this.progress = progress;
         this.professor = professor;
-        topics = new List<Topic>();
     }
 
-    public void AddTopic(Topic topic)
+    public void PrintInfo()
     {
-        topics.Add(topic);
+        Console.WriteLine("Course: " + name + " (" + code + ")");
+        Console.WriteLine("Progress: " + progress);
+        Console.WriteLine("Professor: " + professor.name);
     }
 }
