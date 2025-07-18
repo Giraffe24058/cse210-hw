@@ -1,10 +1,7 @@
 using System;
-using System.Collections.Generic;
 
 class Program
 {
-    static ReceiptManager receiptManager = new ReceiptManager();
-
     static void Main(string[] args)
     {
         bool running = true;
@@ -48,22 +45,5 @@ class Program
         }
     }
 
-    static void AddReceipt()
-    {
-        Console.Write("Title: ");
-        string title = Console.ReadLine();
 
-        Console.Write("Date (yyyy-mm-dd): ");
-        DateTime date = DateTime.Parse(Console.ReadLine());
-
-        Console.Write("Store name: ");
-        string store = Console.ReadLine();
-
-        Console.Write("Total amount: ");
-        decimal total = decimal.Parse(Console.ReadLine());
-
-        var receipt = new Receipt(title, date, store, total);
-        receiptManager.AddReceipt(receipt);
-        Console.WriteLine("Receipt added.");
-    }
 }
