@@ -54,7 +54,7 @@ public class Program
         Console.WriteLine("5. Plan a class for next semester");
     }
 
-    public static void AddCourse()
+        public static void AddCourse()
     {
         Console.Write("Course name: ");
         string name = Console.ReadLine();
@@ -68,11 +68,22 @@ public class Program
         Console.Write("Progress status (Taken / Taking / Planned): ");
         string status = Console.ReadLine();
 
-        Course course = new Course(name, code, status, professorName);
+        Console.Write("Credits: ");
+        string creditsInput = Console.ReadLine();
+        int credits;
+
+        if (!int.TryParse(creditsInput, out credits))
+        {
+            Console.WriteLine("Invalid input for credits. Setting credits to 0.");
+            credits = 0;
+        }
+
+        Course course = new Course(name, code, status, professorName, credits);
         planner.AddCourse(course, status);
 
         Console.WriteLine("Added Course.");
     }
+
 
     public static void RemoveCourse()
     {
