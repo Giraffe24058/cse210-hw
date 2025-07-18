@@ -1,49 +1,34 @@
 using System;
 
-class Program
+public class Program
 {
-    static void Main(string[] args)
+    public static void Main(string[] args)
     {
-        bool running = true;
-
-        while (running)
-        {
-            Console.WriteLine("\n=== Receipt Manager ===");
-            Console.WriteLine("1. Add new receipt");
-            Console.WriteLine("2. List receipts");
-            Console.WriteLine("3. Save receipts to file");
-            Console.WriteLine("4. Load receipts from file");
-            Console.WriteLine("5. Exit");
-            Console.Write("Choose an option: ");
-            string input = Console.ReadLine();
-
-            switch (input)
-            {
-                case "1":
-                    AddReceipt();
-                    break;
-                case "2":
-                    receiptManager.ListReceipts();
-                    break;
-                case "3":
-                    Console.Write("Enter filename to save (e.g., receipts.json): ");
-                    string saveFile = Console.ReadLine();
-                    receiptManager.SaveToFile(saveFile);
-                    break;
-                case "4":
-                    Console.Write("Enter filename to load (e.g., receipts.json): ");
-                    string loadFile = Console.ReadLine();
-                    receiptManager.LoadFromFile(loadFile);
-                    break;
-                case "5":
-                    running = false;
-                    break;
-                default:
-                    Console.WriteLine("Invalid option. Try again.");
-                    break;
-            }
-        }
+        // Entry point for the program
     }
 
+    public static void ShowMenu()
+    {
+        // Will display the main menu
+    }
 
+    public static void EnterStudentInfo()
+    {
+        // Will handle entering student name and school stage
+    }
+
+    public static void AddSemester()
+    {
+        // Will handle adding a semester
+    }
+
+    public static void AddCourse()
+    {
+        // Will handle adding a course to a semester
+    }
+
+    public static void ViewPlanner()
+    {
+        // Will display the planner
+    }
 }

@@ -1,7 +1,0 @@
-public class ReportGenerator
-{
-    public void ExportText(Student student)
-    {
-        // Placeholder for export logic
-    }
-}

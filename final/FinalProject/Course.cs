@@ -2,11 +2,11 @@ public class Course
 {
     public string name;
     public string code;
-    public CourseStatus status;
+    public string status;
     public List<Topic> topics;
     public Professor professor;
 
-    public Course(string name, string code, CourseStatus status, Professor professor)
+    public Course(string name, string code, string status, Professor professor)
     {
         this.name = name;
         this.code = code;
