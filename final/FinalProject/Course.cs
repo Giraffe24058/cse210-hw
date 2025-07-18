@@ -1,22 +1,22 @@
 public class Course
 {
-    public string name;
-    public string code;
-    public string progress;
-    public Professor professor;
+    private string _name;
+    private string _code;
+    private string _progress;
+    private string _professorName;
 
-    public Course(string name, string code, string progress, Professor professor)
+    public Course(string name, string code, string progress, string professorName)
     {
-        this.name = name;
-        this.code = code;
-        this.progress = progress;
-        this.professor = professor;
+        _name = name;
+        _code = code;
+        _progress = progress;
+        _professorName = professorName;
     }
 
     public void PrintInfo()
     {
-        Console.WriteLine("Course: " + name + " (" + code + ")");
-        Console.WriteLine("Progress: " + progress);
-        Console.WriteLine("Professor: " + professor.name);
+        Console.WriteLine("Course: " + _name + " (" + _code + ")");
+        Console.WriteLine("Progress: " + _progress);
+        Console.WriteLine("Professor: " + _professorName);
     }
 }
