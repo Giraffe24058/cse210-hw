@@ -34,7 +34,7 @@ public class Program
                     break;
                 case "0":
                     running = false;
-                    Console.WriteLine("Goodbye!");
+                    Console.WriteLine("Good luck with school!");
                     break;
                 default:
                     Console.WriteLine("Invalid choice, try again.");
