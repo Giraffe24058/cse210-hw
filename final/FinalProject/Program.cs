@@ -101,12 +101,13 @@ public class Program
     public static void ShowCourseOptions()
     {
         Console.WriteLine("Class options:");
-        // Example list, you can expand or connect with CourseCatalog later
         List<CourseOption> options = new List<CourseOption>()
         {
             new CourseOption("Math 101", "M101", 3, "Professor Lowski"),
             new CourseOption("Science 101", "S101", 4, "Professor Smith"),
-            new CourseOption("History 201", "H201", 3, "Professor Jones")
+            new CourseOption("History 201", "H201", 3, "Professor Jones"),
+            new CourseOption("English 101", "E101", 3, "Professor Brown"),
+            new CourseOption("Computer Science 101", "CS101", 4, "Professor Davis")
         };
 
         foreach (var option in options)
