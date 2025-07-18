@@ -1,0 +1,8 @@
+[
+  {
+    "Title": "fuel",
+    "Date": "2020-10-10",
+    "Store": "maverik",
+    "Total": 970
+  }
+]
