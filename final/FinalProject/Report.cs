@@ -1,37 +1,52 @@
-public class ReportGenerator
+public class Report
 {
-    public void PrintPlanner(Student student)
+    public void PrintPlanner(Schedule schedule)
     {
-        if (student == null)
+        if (schedule == null)
         {
-            Console.WriteLine("No student data available.");
+            Console.WriteLine("No schedule data available.");
             return;
         }
 
-        student.PrintInfo();
-
-        if (student.semesters.Count == 0)
+        Console.WriteLine("=== Taken Courses ===");
+        if (schedule.takenCourses.Count == 0)
         {
-            Console.WriteLine("No semesters added.");
-            return;
+            Console.WriteLine("  None");
         }
-
-        foreach (Semester semester in student.semesters)
+        else
         {
-            Console.WriteLine();
-            semester.PrintInfo();
-
-            if (semester.courses.Count == 0)
+            foreach (Course course in schedule.takenCourses)
             {
-                Console.WriteLine("  No courses in this semester.");
-                continue;
-            }
-
-            foreach (Course course in semester.courses)
-            {
-                Console.WriteLine();
                 course.PrintInfo();
-                course.professor.PrintInfo();
+                Console.WriteLine();
+            }
+        }
+
+        Console.WriteLine("=== Current Courses ===");
+        if (schedule.currentCourses.Count == 0)
+        {
+            Console.WriteLine("  None");
+        }
+        else
+        {
+            foreach (Course course in schedule.currentCourses)
+            {
+                course.PrintInfo();
+                Console.WriteLine();
+            }
+        }
+
+        Console.WriteLine("=== Planned Courses ===");
+        if (schedule.plannedCourses.Count == 0)
+        {
+            Console.WriteLine("  None");
+        }
+        else
+        {
+            foreach (Course course in schedule.plannedCourses)
+            {
+                course.PrintInfo();
+                Console.WriteLine();
             }
         }
     }

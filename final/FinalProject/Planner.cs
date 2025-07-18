@@ -1,45 +1,44 @@
 public class Planner
 {
-    public Student student;
-    public ReportGenerator report;
+    private Schedule _schedule;
+    private Report _report;
 
-    public Planner(Student student)
+    public Planner(Schedule schedule)
     {
-        this.student = student;
-        report = new ReportGenerator();
+        _schedule = schedule;
+        _report = new Report();
     }
 
     public void PrintPlanner()
     {
-        report.PrintPlanner(student);
+        _report.PrintPlanner(_schedule);
     }
 
-    public void AddCourseToSemester(int semesterIndex, Course course)
+    public void AddCourse(Course course, string status)
     {
-        if (student == null || semesterIndex < 0 || semesterIndex >= student.semesters.Count)
+        if (_schedule == null)
         {
-            Console.WriteLine("Invalid semester index.");
+            Console.WriteLine("No schedule found.");
             return;
         }
 
-        student.semesters[semesterIndex].AddCourse(course);
-        Console.WriteLine("Course added to semester: " + student.semesters[semesterIndex].name);
+        _schedule.AddCourse(course, status);
+        Console.WriteLine("Added " + course.GetName() + " to planner");
     }
 
-    public void RemoveCourseFromSemester(int semesterIndex, string courseName)
+    public void RemoveCourse(string courseName)
     {
-        if (student == null || semesterIndex < 0 || semesterIndex >= student.semesters.Count)
+        if (_schedule == null)
         {
-            Console.WriteLine("Invalid semester index.");
+            Console.WriteLine("No schedule found.");
             return;
         }
 
-        Semester semester = student.semesters[semesterIndex];
         Course courseToRemove = null;
 
-        foreach (Course course in semester.courses)
+        foreach (Course course in _schedule.currentCourses)
         {
-            if (course.name == courseName)
+            if (course.GetName() == courseName)
             {
                 courseToRemove = course;
                 break;
@@ -48,7 +47,7 @@ public class Planner
 
         if (courseToRemove != null)
         {
-            semester.courses.Remove(courseToRemove);
+            _schedule.currentCourses.Remove(courseToRemove);
             Console.WriteLine("Course removed: " + courseName);
         }
         else
@@ -56,6 +55,4 @@ public class Planner
             Console.WriteLine("Course not found: " + courseName);
         }
     }
-
-
 }

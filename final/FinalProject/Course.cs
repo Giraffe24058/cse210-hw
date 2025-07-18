@@ -13,6 +13,11 @@ public class Course
         _professorName = professorName;
     }
 
+    public string GetName()
+    {
+        return _name;
+    }
+
     public void PrintInfo()
     {
         Console.WriteLine("Course: " + _name + " (" + _code + ")");
