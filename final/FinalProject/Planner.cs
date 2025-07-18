@@ -1,3 +1,5 @@
+using System;
+
 public class Planner
 {
     private Schedule _schedule;
@@ -36,23 +38,18 @@ public class Planner
 
         Course courseToRemove = null;
 
-        foreach (Course course in _schedule.currentCourses)
+        // Look for the course in all course lists (taken, current, planned) so remove works no matter where
+        foreach (var courseList in new[] { _schedule.currentCourses, _schedule.takenCourses, _schedule.plannedCourses })
         {
-            if (course.GetName() == courseName)
+            courseToRemove = courseList.Find(c => c.GetName().Equals(courseName, StringComparison.OrdinalIgnoreCase));
+            if (courseToRemove != null)
             {
-                courseToRemove = course;
-                break;
+                courseList.Remove(courseToRemove);
+                Console.WriteLine("Course removed: " + courseName);
+                return;
             }
         }
 
-        if (courseToRemove != null)
-        {
-            _schedule.currentCourses.Remove(courseToRemove);
-            Console.WriteLine("Course removed: " + courseName);
-        }
-        else
-        {
-            Console.WriteLine("Course not found: " + courseName);
-        }
+        Console.WriteLine("Course not found: " + courseName);
     }
 }

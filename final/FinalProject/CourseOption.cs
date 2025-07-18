@@ -1,9 +1,9 @@
 public class CourseOption
 {
-    private string _name;
-    private string _code;
-    private int _credits;
-    private string _professorName;
+    public string _name;
+    public string _code;
+    public int _credits;
+    public string _professorName;
 
     public CourseOption(string name, string code, int credits, string professorName)
     {
@@ -20,9 +20,6 @@ public class CourseOption
 
     public void PrintInfo()
     {
-        // TODO: implement this method to print info about this course option
+        Console.WriteLine($"{_name} ({_code}) - {_credits} credits - Professor {_professorName}");
     }
 }
-
-    
-
