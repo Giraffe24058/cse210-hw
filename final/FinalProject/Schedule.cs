@@ -15,28 +15,3 @@ public class Schedule
     }
 }
 
-public class CourseOption
-{
-    public string name;
-    public string code;
-    public int credits;
-    public string professorName;
-
-    public CourseOption(string name, string code, int credits, string professorName)
-    {
-        name = name;
-        code = code;
-        credits = credits;
-        professorName = professorName;
-    }
-
-    public Course ToCourse(string status)
-    {
-         
-    }
-
-    public void PrintInfo()
-    {
-         
-    }
-}

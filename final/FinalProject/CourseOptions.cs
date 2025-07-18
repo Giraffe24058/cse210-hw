@@ -1,25 +1,28 @@
 public class CourseOption
 {
-    public string name;
-    public string code;
-    public int credits;
-    public string professorName;
+    private string _name;
+    private string _code;
+    private int _credits;
+    private string _professorName;
 
     public CourseOption(string name, string code, int credits, string professorName)
     {
-        this.name = name;
-        this.code = code;
-        this.credits = credits;
-        this.professorName = professorName;
+        _name = name;
+        _code = code;
+        _credits = credits;
+        _professorName = professorName;
     }
 
     public Course ToCourse(string status)
     {
-         
+        return new Course(_name, _code, status, professorName);
     }
 
     public void PrintInfo()
     {
-         
+        // TODO: implement this method to print info about this course option
     }
 }
+
+    
+
