@@ -1,6 +1,6 @@
 public class Progress
 {
-    public const string Taken = "Taken";
-    public const string Taking = "Taking";
-    public const string ToTake = "ToTake";
+    public string Taken = "Taken";
+    public string Taking = "Taking";
+    public string ToTake = "ToTake";
 }
