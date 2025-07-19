@@ -1,35 +1,21 @@
-public class Course
+public class Course : CourseBase
 {
-    private string _name;
-    private string _code;
     private string _progress;
-    private string _professorName;
-    private int _credits;
 
     public Course(string name, string code, string progress, string professorName, int credits)
+        : base(name, code, credits, professorName)
     {
-        _name = name;
-        _code = code;
         _progress = progress;
-        _professorName = professorName;
-        _credits = credits;
     }
 
-    public string GetName()
+    public string GetProgress()
     {
-        return _name;
+        return _progress;
     }
 
-    public int GetCredits()
+    public override void PrintInfo()
     {
-        return _credits;
-    }
-
-    public void PrintInfo()
-    {
-        Console.WriteLine("Course: " + _name + " (" + _code + ")");
-        Console.WriteLine("Progress: " + _progress);
-        Console.WriteLine("Professor: " + _professorName);
-        Console.WriteLine("Credits: " + _credits);
+        Console.WriteLine($"[Course] {_name} ({_code}) - {_credits} credits - Professor {_professorName}");
+        Console.WriteLine($"Progress: {_progress}");
     }
 }

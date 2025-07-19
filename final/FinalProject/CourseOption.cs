@@ -1,16 +1,8 @@
-public class CourseOption
+public class CourseOption : CourseBase
 {
-    public string _name;
-    public string _code;
-    public int _credits;
-    public string _professorName;
-
     public CourseOption(string name, string code, int credits, string professorName)
+        : base(name, code, credits, professorName)
     {
-        _name = name;
-        _code = code;
-        _credits = credits;
-        _professorName = professorName;
     }
 
     public Course ToCourse(string status)
@@ -18,8 +10,8 @@ public class CourseOption
         return new Course(_name, _code, status, _professorName, _credits);
     }
 
-    public void PrintInfo()
+    public override void PrintInfo()
     {
-        Console.WriteLine($"{_name} ({_code}) - {_credits} credits - Professor {_professorName}");
+        Console.WriteLine($"[Option] {_name} ({_code}) - {_credits} credits - Professor {_professorName}");
     }
 }
