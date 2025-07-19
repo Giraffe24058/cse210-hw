@@ -9,30 +9,27 @@ public class Schedule
 
     public void AddCourse(Course course, string status)
     {
-        string lowerStatus = status.ToLower();
+        if (status == "Taken") takenCourses.Add(course);
+        else if (status == "Taking") currentCourses.Add(course);
+        else if (status == "Planned") plannedCourses.Add(course);
+    }
 
-        if (lowerStatus == "taken")
-            takenCourses.Add(course);
-        else if (lowerStatus == "taking")
-            currentCourses.Add(course);
-        else if (lowerStatus == "planned")
-            plannedCourses.Add(course);
-        else
-            Console.WriteLine("Unknown course status. Course not added.");
+    public void RemoveCourse(string name)
+    {
+        takenCourses.RemoveAll(c => c.GetName() == name);
+        currentCourses.RemoveAll(c => c.GetName() == name);
+        plannedCourses.RemoveAll(c => c.GetName() == name);
     }
 
     public void PrintAllCourses()
     {
         Console.WriteLine("Taken Courses:");
-        foreach (Course c in takenCourses)
-            c.PrintInfo();
+        foreach (var c in takenCourses) c.PrintInfo();
 
         Console.WriteLine("\nCurrent Courses:");
-        foreach (Course c in currentCourses)
-            c.PrintInfo();
+        foreach (var c in currentCourses) c.PrintInfo();
 
         Console.WriteLine("\nPlanned Courses:");
-        foreach (Course c in plannedCourses)
-            c.PrintInfo();
+        foreach (var c in plannedCourses) c.PrintInfo();
     }
 }

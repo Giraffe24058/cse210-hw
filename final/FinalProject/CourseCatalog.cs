@@ -7,7 +7,7 @@ public class CourseCatalog
 
     public CourseCatalog()
     {
-        // Add some courses with credits and professor name
+        // Maybe later add some more courses
         courseOptions.Add(new CourseOption("Math 101", "M101", 3, "Professor Lowski"));
         courseOptions.Add(new CourseOption("Science 101", "S101", 4, "Professor Smith"));
         courseOptions.Add(new CourseOption("History 201", "H201", 3, "Professor Jones"));
